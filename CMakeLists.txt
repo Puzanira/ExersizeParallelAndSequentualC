@@ -13,6 +13,10 @@ target_link_libraries (TestRealisations ParallelRealisation SequentialRealisatio
 add_executable (TestFileHelper TestFileHelper.c)
 target_link_libraries (TestFileHelper FileHelper)
 
+set(pathword1 "${PROJECT_SOURCE_DIR}/TestFiles/test1.txt")
+set(pathword2 "${PROJECT_SOURCE_DIR}/TestFiles/test2.txt")
+set(pathword3 "${PROJECT_SOURCE_DIR}/TestFiles/test3.txt")
+
 # add a "test" target:
 enable_testing()
 
@@ -23,7 +27,7 @@ add_test(
 
 add_test(
     NAME TestFileHelper 
-    COMMAND TestFileHelper
+    COMMAND TestFileHelper "${pathword1}" "${pathword2}" "${pathword3}"
 )
 
 

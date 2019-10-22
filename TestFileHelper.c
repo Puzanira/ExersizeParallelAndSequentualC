@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <assert.h>
 
-#include "lib/FileHelper.h"
+#include "FileHelper.h"
 
 void test()
 {

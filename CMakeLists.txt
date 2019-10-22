@@ -18,7 +18,7 @@ enable_testing()
 
 add_test(
     NAME TestRealisations 
-    COMMAND TextMiningCompiler
+    COMMAND TestRealisations
 )
 
 add_test(

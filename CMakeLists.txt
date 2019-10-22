@@ -11,7 +11,7 @@ target_link_libraries (TestRealisations ParallelRealisation SequentialRealisatio
 
 # add the executable
 add_executable (TestFileHelper TestFileHelper.c)
-target_link_libraries (TestFileHelper ParallelRealisation SequentialRealisation)
+target_link_libraries (TestFileHelper FileHelper)
 
 # add a "test" target:
 enable_testing()

@@ -7,11 +7,11 @@ include_directories ("${PROJECT_SOURCE_DIR}/lib")
 
 # add the executable
 add_executable (TestRealisations TestRealisations.c)
-target_link_libraries (TestRealisations FileHelper ParallelRealisation SequentialRealisation)
+target_link_libraries (TestRealisations ParallelRealisation SequentialRealisation)
 
 # add the executable
 add_executable (TestFileHelper TestFileHelper.c)
-target_link_libraries (TestFileHelper FileHelper ParallelRealisation SequentialRealisation)
+target_link_libraries (TestFileHelper ParallelRealisation SequentialRealisation)
 
 # add a "test" target:
 enable_testing()

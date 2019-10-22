@@ -11,12 +11,12 @@ void test(const char* fileTest1, const char* fileTest2, const char* fileTest3)
         int result = check_file_availability("text.txt");
         assert(result == 0);
     }
-//     {
-//         printf("Test Case 2: is file\n");
-//         int result = check_file_availability(fileTest1);
-//         //printf("%d", result2);
-//         assert(result == 1);
-//     }
+    {
+        printf("Test Case 2: is file\n");
+        int result = check_file_availability(fileTest1);
+        //printf("%d", result2);
+        assert(result == 1);
+    }
 //     {
 //         printf("Test Case 3: small file 1 chunk\n");
 //         int result = get_next_offset(fileTest1, 0, 1);

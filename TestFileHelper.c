@@ -1,17 +1,10 @@
 #include <stdio.h>
 #include <assert.h>
 
-#include "FileHelper.h"
+#include "lib/FileHelper.h"
 
-void test()
+void test(const char* fileTest1, const char* fileTest2, const char* fileTest3)
 {
-    // Файл содержит: "Is File!" Длина: 8
-    const char* fileTest1 = "TestFiles/test1.txt";
-    // Длина файла: 1156
-    const char* fileTest2 = "TestFiles/test2.txt";
-    
-    const char* fileTest3 = "TestFiles/test3.txt";
-
     printf("SMALL FILE TESTS\n\n");
     {
         printf("Test Case 1: no file\n");
@@ -96,50 +89,50 @@ void test()
     /// TECTЫ НА ФАЙЛЕ СРЕДНЕГО РАЗМЕРА
     /*-------------------------------------------------------*/
 
-    // {
-    //     printf("Test Case 10: medium file 1 chunk\n");
-    //     int result = get_next_offset(fileTest2, 0, 1);
-    //     //printf("%d\n", result);
-    //     assert(result == 1156);
-    // }
-    // {
-    //     printf("Test Case 11: medium file, start=0, 2 chunks\n");
-    //     int result = get_next_offset(fileTest2, 0, 2);
-    //     //printf("%d\n", result);
-    //     assert(result == 579);
-    // }
-    // {
-    //     printf("Test Case 11.2: medium file, start=579, 1 chunk\n");
-    //     int result = get_next_offset(fileTest2, 579, 1);
-    //     //printf("%d\n", result);
-    //     assert(result == 1156);
-    // }
-    // {
-    //     printf("Test Case 12: medium file, start=0, 5 chunks\n");
-    //     int chunks = 5;
-    //     long int currentStartOffset = 0;
-    //     for (int i = chunks; i > 0; i--)
-    //     {
-    //         //printf("%ld  ", currentStartOffset);
-    //         currentStartOffset = get_next_offset(fileTest2, currentStartOffset, i);
-    //         //printf("%ld\n", currentStartOffset);
-    //     }
-    //     //printf("%ld\n", currentStartOffset);
-    //     assert(currentStartOffset == 1156);
-    // }
-    // {
-    //     printf("Test Case 13: medium file, start=0, 10 chunks\n");
-    //     int chunks = 10;
-    //     long int currentStartOffset = 0;
-    //     for (int i = chunks; i > 0; i--)
-    //     {
-    //         printf("%ld  ", currentStartOffset);
-    //         currentStartOffset = get_next_offset(fileTest2, currentStartOffset, i);
-    //         printf("%ld\n", currentStartOffset);
-    //     }
-    //     //printf("%d\n", result);
-    //     //assert(currentStartOffset == 1156);
-    // }
+    {
+        printf("Test Case 10: medium file 1 chunk\n");
+        int result = get_next_offset(fileTest2, 0, 1);
+        //printf("%d\n", result);
+        assert(result == 1156);
+    }
+    {
+        printf("Test Case 11: medium file, start=0, 2 chunks\n");
+        int result = get_next_offset(fileTest2, 0, 2);
+        //printf("%d\n", result);
+        assert(result == 579);
+    }
+    {
+        printf("Test Case 11.2: medium file, start=579, 1 chunk\n");
+        int result = get_next_offset(fileTest2, 579, 1);
+        //printf("%d\n", result);
+        assert(result == 1156);
+    }
+    {
+        printf("Test Case 12: medium file, start=0, 5 chunks\n");
+        int chunks = 5;
+        long int currentStartOffset = 0;
+        for (int i = chunks; i > 0; i--)
+        {
+            //printf("%ld  ", currentStartOffset);
+            currentStartOffset = get_next_offset(fileTest2, currentStartOffset, i);
+            //printf("%ld\n", currentStartOffset);
+        }
+        //printf("%ld\n", currentStartOffset);
+        assert(currentStartOffset == 1156);
+    }
+    {
+        printf("Test Case 13: medium file, start=0, 10 chunks\n");
+        int chunks = 10;
+        long int currentStartOffset = 0;
+        for (int i = chunks; i > 0; i--)
+        {
+            printf("%ld  ", currentStartOffset);
+            currentStartOffset = get_next_offset(fileTest2, currentStartOffset, i);
+            printf("%ld\n", currentStartOffset);
+        }
+        //printf("%d\n", result);
+        //assert(currentStartOffset == 1156);
+    }
 
     printf("\nMAX WORD FILE TESTS\n\n");
 
@@ -189,6 +182,6 @@ void test()
 
 int main(int argc, char const *argv[])
 {
-    test();
+    test(argv[1], argv[2], argv[3]);
     return 0;
 }

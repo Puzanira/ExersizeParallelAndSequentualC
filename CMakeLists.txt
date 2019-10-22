@@ -22,7 +22,7 @@ enable_testing()
 
 add_test(
     NAME TestRealisations 
-    COMMAND TestRealisations
+    COMMAND TestRealisations "${pathword3}"
 )
 
 add_test(

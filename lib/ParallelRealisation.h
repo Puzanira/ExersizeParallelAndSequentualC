@@ -4,7 +4,7 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 
-#include "fileHelper.h"
+#include "FileHelper.h"
 
 #define FALSE               0
 #define TRUE                !(FALSE)

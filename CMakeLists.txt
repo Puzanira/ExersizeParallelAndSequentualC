@@ -6,11 +6,11 @@ add_subdirectory (lib)
 include_directories ("${PROJECT_SOURCE_DIR}/lib")
 
 # add the executable
-add_executable (TestRealisations Tests/TestRealisations.c)
+add_executable (TestRealisations TestRealisations.c)
 target_link_libraries (TestRealisations FileHelper ParallelRealisation SequentialRealisation)
 
 # add the executable
-add_executable (TestFileHelper Tests/TestFileHelper.c)
+add_executable (TestFileHelper TestFileHelper.c)
 target_link_libraries (TestFileHelper FileHelper ParallelRealisation SequentialRealisation)
 
 # add a "test" target:

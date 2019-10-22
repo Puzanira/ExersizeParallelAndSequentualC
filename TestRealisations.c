@@ -25,7 +25,7 @@ void test(const char* fileName)
     printf("passed");
 }
 
-int main(int argc, char const *argv[])
+int main(int argc, const char *argv[])
 {
     if (argc != 2)
         return -1;

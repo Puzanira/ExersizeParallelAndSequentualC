@@ -5,11 +5,6 @@ project (Exersize)
 add_subdirectory (lib) 
 include_directories ("${PROJECT_SOURCE_DIR}/lib")
 
-# add the subdirectory containing the CMakeLists.txt for the library
-add_subdirectory (Tests) 
-include_directories ("${PROJECT_SOURCE_DIR}/Tests")
-
-
 # add a "test" target:
 enable_testing()
 

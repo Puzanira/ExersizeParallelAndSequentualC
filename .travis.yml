@@ -15,4 +15,4 @@ before_script:
   - cd build
   - cmake ..
 
-script: make && make test && valgrind ./TestRealisations
+script: make && make test && valgrind --error-exitcode=42 --leak-check=full ./TestRealisations

@@ -16,8 +16,7 @@ before_script:
   - cmake ..
 
 script: 
-  - make
-  - make test
+  - make && make test
   - valgrind --error-exitcode=42 --leak-check=full -q ./TestRealisations
   
 after_script:

@@ -8,7 +8,7 @@
     - 1, если файл существует и доступен для чтения
     - 0, если не удается открыть файл 
 */
-int check_file_availability(const char* filename);
+int         check_file_availability     (const char* filename);
 
 /*
     Функция разбивает файл на куски и возвращает конечную границу следующего куска.
@@ -24,7 +24,9 @@ int check_file_availability(const char* filename);
     - 0, если передняя граница == EOF
     - -1, если файл не удается открыть
 */
-long int get_next_offset(const char* filename, long int startOffset, int numberOfChunks);
+long int    get_next_offset             (const char* filename, 
+                                         long int startOffset, 
+                                         int numberOfChunks);
 
 /*
     Функция выведет наибольшую последовательность из латинских букв и цифр
@@ -33,4 +35,6 @@ long int get_next_offset(const char* filename, long int startOffset, int numberO
     Возвращаемые значения: 
     - от 0 до длины отрезка
 */
-long int get_max_word(const char* filename, long int startOffset, long int finishOffset);
+long int    get_max_word                (const char* filename, 
+                                         long int startOffset, 
+                                         long int finishOffset);

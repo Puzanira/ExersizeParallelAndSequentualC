@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <assert.h>
 
-#include "lib/FileHelper.h"
+#include "lib/file_helper.h"
 
 void test(const char* fileTest1, const char* fileTest2, const char* fileTest3)
 {

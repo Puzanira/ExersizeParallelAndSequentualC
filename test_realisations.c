@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <assert.h>
 
-#include "ParallelRealisation.h"
-#include "SequentualRealisation.h"
+#include "parallel_realisation.h"
+#include "sequentual_realisation.h"
 
 void test(const char* fileName)
 {

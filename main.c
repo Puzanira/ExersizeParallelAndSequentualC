@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-#include "ParallelRealisation.h"
-#include "SequentualRealisation.h"
+#include "parallel_realisation.h"
+#include "sequentual_realisation.h"
 
 /*  Передаются параметры: 
     1: 0, если debug == FALSE, иначе 1

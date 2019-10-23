@@ -6,16 +6,16 @@ add_subdirectory (lib)
 include_directories ("${PROJECT_SOURCE_DIR}/lib")
 
 # add the executable
-add_executable (TestRealisations TestRealisations.c)
-target_link_libraries (TestRealisations ParallelRealisation SequentialRealisation)
+add_executable (TestRealisations test_realisations.c)
+target_link_libraries (TestRealisations parallel_realisation SequentialRealisation)
 
 # add the executable
-add_executable (TestFileHelper TestFileHelper.c)
-target_link_libraries (TestFileHelper FileHelper)
+add_executable (Testfile_helper test_file_helper.c)
+target_link_libraries (Testfile_helper file_helper)
 
-set(pathword1 "${PROJECT_SOURCE_DIR}/TestFiles/test1.txt")
-set(pathword2 "${PROJECT_SOURCE_DIR}/TestFiles/test2.txt")
-set(pathword3 "${PROJECT_SOURCE_DIR}/TestFiles/test3.txt")
+set(pathword1 "${PROJECT_SOURCE_DIR}/Test_Files/test1.txt")
+set(pathword2 "${PROJECT_SOURCE_DIR}/Test_Files/test2.txt")
+set(pathword3 "${PROJECT_SOURCE_DIR}/Test_Files/test3.txt")
 
 # add a "test" target:
 enable_testing()
@@ -26,8 +26,8 @@ add_test(
 )
 
 add_test(
-    NAME TestFileHelper 
-    COMMAND TestFileHelper "${pathword1}" "${pathword2}" "${pathword3}"
+    NAME Testfile_helper 
+    COMMAND Testfile_helper "${pathword1}" "${pathword2}" "${pathword3}"
 )
 
 

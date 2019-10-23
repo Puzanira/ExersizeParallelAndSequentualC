@@ -17,7 +17,7 @@ before_script:
 
 script: 
   - make && make test
-  - valgrind --error-exitcode=42 --leak-check=full -q ./TestRealisations
+  - valgrind --error-exitcode=42 --leak-check=full --tool=memcheck ./TestRealisations
   
 after_script:
   - make clean
